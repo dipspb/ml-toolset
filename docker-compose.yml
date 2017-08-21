@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  caffe:
+    image: dipspb/caffe-jupyter:gpu
+    build:
+      context: ./docker/jupyter-gpu
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./:/workspace
+    environment:
+      PASSWORD: '12345'
+    ports: [ '7777:8888' ]
+    command: "bash -c 'jupyter notebook --config=/jupyter_notebook_config.py --allow-root'"
