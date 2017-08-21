@@ -1,14 +1,27 @@
 version: '3'
 services:
 
-  caffe:
-    image: dipspb/caffe-jupyter:gpu
+  ml-toolset-gpu:
+    image: dipspb/ml-toolset:latest-gpu
     build:
-      context: ./docker/jupyter-gpu
-      dockerfile: Dockerfile
+      context: ./docker
+      dockerfile: Dockerfile.gpu
     restart: unless-stopped
     volumes:
-      - ./:/workspace
+      - ./notebooks:/workspace
+    environment:
+      PASSWORD: '12345'
+    ports: [ '7777:8888' ]
+    command: "bash -c 'jupyter notebook --config=/jupyter_notebook_config.py --allow-root'"
+
+  ml-toolset-cpu:
+    image: dipspb/ml-toolset:latest
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.cpu
+    restart: unless-stopped
+    volumes:
+      - ./notebooks:/workspace
     environment:
       PASSWORD: '12345'
     ports: [ '7777:8888' ]
