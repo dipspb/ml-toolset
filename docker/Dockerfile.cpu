@@ -1,6 +1,6 @@
 FROM python:3.5.2
 
-MAINTAINER @joshuacook
+MAINTAINER @dipspb
 
 # Pick up some TF dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
