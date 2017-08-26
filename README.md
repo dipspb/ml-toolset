@@ -9,6 +9,7 @@ Packages installed:
 - matplotlib
 - jupyter
 - opencv3
+- dlib 19.4
 - pillow
 - scikit-learn
 - scikit-image
