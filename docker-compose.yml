@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile.gpu
     restart: unless-stopped
     volumes:
-      - ./notebooks:/workspace
+      - ./notebooks:/src
     environment:
       PASSWORD: '12345'
     ports: [ '7777:8888' ]
@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile.cpu
     restart: unless-stopped
     volumes:
-      - ./notebooks:/workspace
+      - ./notebooks:/src
     environment:
       PASSWORD: '12345'
     ports: [ '7777:8888' ]
