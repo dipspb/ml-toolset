@@ -2,12 +2,17 @@ name: ml-toolset
 channels:
     - https://conda.anaconda.org/menpo
     - conda-forge
+    - mlgill
+    - bioconda
+    - jim-hart
 dependencies:
     - python==3.5.2
     - numpy
     - matplotlib
     - jupyter
     - opencv3
+    - imutils
+    - pillow
     - dlib=19.4
     - pillow
     - scikit-learn
@@ -22,7 +27,10 @@ dependencies:
     - imageio=2.1.2
     - pyqt=4.11.4
     - xgboost=0.6
+    - leptonica
+    - pytesseract
     - pip:
+        - tesseract-ocr
         - edward
         - moviepy
         - https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.1.0-cp35-none-linux_x86_64.whl

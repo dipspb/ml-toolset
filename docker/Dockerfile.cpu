@@ -15,6 +15,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         software-properties-common \
         unzip \
         libgtk2.0-0 \
+        libleptonica-dev \
+        libtesseract-dev \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
