@@ -12,7 +12,6 @@ dependencies:
     - jupyter
     - opencv3
     - imutils
-    - pillow
     - dlib=19.4
     - pillow
     - scikit-learn

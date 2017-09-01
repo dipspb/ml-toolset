@@ -11,6 +11,10 @@ Packages installed:
 - opencv3
 - dlib 19.4
 - pillow
+- imutils
+- leptonica
+- pytesseract
+- tesseract-ocr
 - scikit-learn
 - scikit-image
 - scipy
