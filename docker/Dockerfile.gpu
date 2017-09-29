@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         tk-dev \
         libleptonica-dev \
         libtesseract-dev \
+        tesseract-ocr \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -34,6 +35,10 @@ RUN conda env create -f environment.yml --debug -v -v
 
 # cleanup tarballs and downloaded package files
 RUN conda clean -tp -y
+
+# copy English tessercat ocr data
+COPY tessdata/* /usr/share/tesseract-ocr/tessdata/
+ENV TESSDATA_PREFIX="/usr/share/tesseract-ocr/"
 
 # Set up our notebook config.
 COPY jupyter_notebook_config.py /root/.jupyter/

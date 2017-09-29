@@ -27,9 +27,8 @@ dependencies:
     - pyqt=4.11.4
     - xgboost=0.6
     - leptonica
-    - pytesseract
     - pip:
-        - tesseract-ocr
+        - tesserocr
         - edward
         - moviepy
         - https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.1.0-cp35-none-linux_x86_64.whl
