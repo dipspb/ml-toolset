@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         rsync \
         software-properties-common \
         unzip \
+        unrar \
         libgtk2.0-0 \
         libleptonica-dev \
         libtesseract-dev \
