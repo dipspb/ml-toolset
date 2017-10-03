@@ -5,11 +5,15 @@ channels:
     - mlgill
     - bioconda
     - jim-hart
+    - soumith
+    - intel
 dependencies:
     - python==3.5.2
     - numpy
     - matplotlib
     - jupyter
+    - nbconvert
+    - ipywidgets
     - opencv3
     - imutils
     - dlib=19.4
@@ -27,7 +31,12 @@ dependencies:
     - pyqt=4.11.4
     - xgboost=0.6
     - leptonica
+    - pytorch
+    - torchvision
+    - sympy
     - pip:
+        - six
+        - imgaug
         - gensim
         - spacy
         - tesserocr
@@ -36,4 +45,5 @@ dependencies:
         - https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.1.0-cp35-none-linux_x86_64.whl
         - https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.3.0-cp35-cp35m-linux_x86_64.whl
         - keras==1.2.2
-
+        - mxnet-cu80==0.11.0
+        - catboost
